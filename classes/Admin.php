@@ -17,5 +17,15 @@ class Admin extends Application {
 			return false;
 		}
 	}
+
+	public function getFullNameAdmin($id = null) {
+            if(!empty($id)) {
+                $sql = "SELECT *, CONCAT_WS(' ', `first_name`, `last_name`) AS `full_name` FROM `{$this->_table}` WHERE `id` = ".intval($id);
+                $result = $this->db->fetchOne($sql);
+                if(!empty($result)) {
+                    return $result['full_name'];
+                }
+            }
+        }
 }
 ?>

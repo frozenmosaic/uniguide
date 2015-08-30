@@ -2,10 +2,12 @@
 class Url {
 
 	private static $_folder = PAGES_DIR;
-	public static $_cPage;
+	public $_cPage;
+	public static $_first = '';
+	public $_params = array();
 
-	private $_admin = "admin"; // first element cua admin panel
-	private $_college_url = "du-lieu-truong"; // name of college database
+	public $_admin = "admin"; // first element cua admin panel
+	private $_college_Url = "du-lieu-truong"; // name of college database
 	private $_article_temp = "article"; // name of articleicle template page
 	private $_college_temp = "college"; // name of college profile template page
 
@@ -20,22 +22,23 @@ class Url {
 		// trong truong hop $uri chi gom domain name thi array $uri van co first element va element rong
 
 		$first = $uri[0];
+		self::$_first = $first;
 
 		switch ($first) {
 			case "":
-				self::$_cPage = "index";
+				$this->_cPage = "index";
 				break;
 
 			case $this->_admin:
-				# code...
+				$this->adminProcess();
 				break;
 
-			case $this->_college_url:
-				self::$_cPage = $this->_college_temp;
+			case $this->_college_Url:
+				$this->_cPage = $this->_college_temp;
 				break;
 			
 			default:
-				self::$_cPage = $this->_article_temp;
+				$this->_cPage = $this->_article_temp;
 		}
 	}
 
@@ -57,10 +60,28 @@ class Url {
 		return $uri;
 	}
 
+	public function href($main = null, $params = null) {
+        if(!empty($main)) {
+            $out = array($main);
+            if(!empty($params) && is_array($params)) {
+                foreach($params as $key => $value) {
+                    $out[] = $value; //array cho vao se co dang ten param va property
+                }
+            }
+            return implode('/', $out).PAGE_EXT; //khi xuat ra se co dang main/ten param/property
+        }
+   	}
+
+   public function get($param = null) {
+        if(!empty($param) && array_key_exists($param, $this->_params)) {
+            return $this->_params[$param];
+        }
+    }
+
 	/*==== ARTICLE PROCESS METHODS ====*/
 
 	public function getPage() {
-		$page = self::$_folder.DS.self::$_cPage.".php";
+		$page = self::$_folder.DS.$this->_cPage.".php";
 		$error = self::$_folder.DS."error.php";
 
 		return is_file($page) ? $page : $error;
@@ -93,7 +114,9 @@ class Url {
 
 	/*==== ADMIN PROCESSING METHODS ====*/
 
-	public function getParam() {}
+	public static function getParam() {
+
+	}
 
 	public function adminProcess() {
 		$uri = self::getUri();
@@ -104,33 +127,25 @@ class Url {
 			if (!empty($uri)) {
 				$first = array_shift($uri);
 				if ($first == $this->_admin) {
-					/*
-						e.g.:
-						panel/products/action/edit/id/19 
-						$first = 'panel' 
-						=> $this->module = 'panel' instead of 'front' to signify that the admin is accessing the website. 
-						=> $first = 'products'
-					 */
-					
-					self::$_cPage = empty($uri) ? "index" : array_shift($uri);
-				}
-				$this->main = $first;
-				$this->cpage = $this->main;
 
+					$second = array_shift($uri);
+					switch ($second) {
+						case "":
+							$this->_cPage = "index";
+							break;
+						
+						default:
+							$this->_cPage = $second;
+					}
+				}
+				
 				if (count($uri) > 1) {
 					$pairs = array();
 					foreach ($uri as $key => $value) {
 						$pairs[] = $value;
 						if (count($pairs) > 1) {
 							if (!Helper::isEmpty($pairs[1])) {
-								// if ($pairs[0] == $this->key_page) {
-								// 	$this->cpage = $pairs[1];
-								// } else if ($pairs[0] == 'c') {
-								// 	$this->c = $pairs[1];
-								// } else if ($pairs[0] == 'a') {
-								// 	$this->a = $pairs[1];
-								// }
-								$this->params[$pairs[0]] = $pairs[1];
+								$this->_params[$pairs[0]] = $pairs[1];
 							}
 							$pairs = array();
 						}
@@ -140,7 +155,39 @@ class Url {
 		}
 	}
 
-	public function getCurrent() {}
+	public function getCurrent($exclude = null, $extension = false, $add = null) {
+            $out = array();
+            if(self::$_first == 'admin') {
+                $out[] = 'admin';
+            }
+            $out[] = $this->_cPage;
+            if(!empty($this->_params)) {
+                if(!empty($exclude)) {
+                    $exclude = Helper::makeArray($exclude);
+                    foreach($this->_params as $key => $value) {
+                        if(!in_array($key, $exclude)) { //neu co exclude thi chi cho vao array out nhung gi khong phai exclude
+                            $out[] = $key;
+                            $out[] = $value;
+                        }
+                    }
+                } else {
+                    foreach($this->_params as $key => $value) {
+                        $out[] = $key;
+                        $out[] = $value;
+                    }
+                }
+            }
+            if(!empty($add)) {
+                $add = Helper::makeArray($add);
+                foreach($add as $item) {
+                    $out[] = $item;
+                }
+            }
+            $url = implode('/', $out);
+            $url .= $extension ? PAGE_EXT : null;
+            return $url;
+            //ket qua la dang index/blah blah/blah blah
+        }
 
 }
 ?>

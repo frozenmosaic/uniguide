@@ -10,4 +10,11 @@
 	</div>
 </div>
 </body>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<script src="<?php root();?>/js/jquery.livequery.js" type="text/javascript"></script>
+
+<script src="<?php root();?>/get_majors/get_majors.js"></script>
+    
+
 </html>

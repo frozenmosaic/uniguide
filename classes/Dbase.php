@@ -74,14 +74,14 @@ class Dbase {
 	}
 
 	public function fetchAll($sql) {
-		$result = $this->query($sql);
-		$out = array();
-		while ($row = mysql_fetch_assoc($result)) {
-			$out[] = $row;
-		}
-		mysql_free_result($result);
-		return $out;
-	}
+        $result = $this->query($sql);
+        $out = array();
+        while ($row = mysql_fetch_assoc($result)) {
+            $out[] = $row;
+        }
+        mysql_free_result($result);
+        return $out;
+    }
 
 	public function fetchOne($sql) {
 		$out = $this->fetchAll($sql);

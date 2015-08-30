@@ -1,7 +1,7 @@
 <?php
 class Helper
 {
-    
+
     public static function getActive($page = null) {
         if (!empty($page)) {
             if (is_array($page)) {
@@ -62,9 +62,9 @@ class Helper
         return $string;
     }
     
-    public static function redirect($url = null) {
-        if (!empty($url)) {
-            header("Location: {$url}");
+    public static function redirect($Url = null) {
+        if (!empty($Url)) {
+            header("Location: {$Url}");
             exit;
         }
     }
@@ -101,11 +101,11 @@ class Helper
             switch ($case) {
                 case 1:
                     
-                    // add url to the array
-                    $link = "<a href=\"" . SITE_URL . ":8888" . "/start/?page=activate&code=";
+                    // add Url to the array
+                    $link = "<a href=\"" . SITE_Url . ":8888" . "/start/?page=activate&code=";
                     $link .= $array['hash'];
                     $link .= "\">";
-                    $link .= SITE_URL . ":8888" . "/start/?page=activate&code=" . $array['hash'] . "</a>";
+                    $link .= SITE_Url . ":8888" . "/start/?page=activate&code=" . $array['hash'] . "</a>";
                     $array['link'] = $link;
                     $_POST['link'] = $link;
 
@@ -136,6 +136,27 @@ class Helper
         $uri = explode('/', $uri);
         return $uri[1];
     }
+
+    public static function isEmpty($value = null) {
+        return empty($value) && !is_numeric($value) ? true : false;
+        //so 0 van bi ham empty coi la empty nhung thuc ra la van co gia tri nen phai la not empty
+        //nen moi phai dung method rieng de kiem tra xem vua empty va vua khong phai la so 0
+        //luc do moi tra ve la true
+    }
+
+    public static function makeArray($array = null) {
+        return is_array($array) ? $array : array($array);
+    }
+
+    public static function json($input = null) {
+            if(!empty($input)) {
+                if(defined("JSON_UNESCAPED_UNICODE")) {
+                    return json_encode($input, JSON_HEX_TAG | JSON_HEX_APOS | JSON_HEX_QUOT | JSON_HEX_AMP | JSON_UNESCAPED_UNICODE);
+                } else {
+                    return json_encode($input, JSON_HEX_TAG | JSON_HEX_APOS | JSON_HEX_QUOT | JSON_HEX_AMP);
+                }
+            }
+        }
 
 }
 ?>

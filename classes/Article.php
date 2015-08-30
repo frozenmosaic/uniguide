@@ -1,10 +1,10 @@
 <?php 
-class Article extends Dbase {
+class Article extends Application {
 
 	private $_table = "articles";
 
 	public function getArticles() {
-		$sql = "SELECT * FROM `{$this->_table}` ORDER BY `name` ASC";
+		$sql = "SELECT * FROM `articles` ORDER BY `name` ASC";
 
 		return $this->db->fetchAll($sql);
 	}
@@ -61,9 +61,9 @@ class Article extends Dbase {
 		}
 	}
 
-	public function checkArticleExist($url = null, $level = null) {
-		if (!empty($url) && !empty($level) && is_numeric($level)) {
-			$sql = "SELECT * FROM `{$this->_table}` WHERE 'level` = '{$level}' AND `url` = '".$this->db->escape($url)."'";
+	public function checkArticleExist($Url = null, $level = null) {
+		if (!empty($Url) && !empty($level) && is_numeric($level)) {
+			$sql = "SELECT * FROM `{$this->_table}` WHERE 'level` = '{$level}' AND `Url` = '".$this->db->escape($Url)."'";
 			return $this->db->fetchOne($sql);
 		}
 		return false;

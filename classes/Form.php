@@ -20,7 +20,17 @@ class Form {
 
 	public function getPost($field = null) {
 		if (!empty($field)) {
-			return $this->isPost($field) ? strip_tags($_POST[$field]) : null;
+			if ($this->isPost($field)) {
+				// if (is_array($_POST[$field])) {
+				// 	return $_POST[$field];
+				// } else {
+				// 	return strip_tags($_POST[$field]);
+				// }
+
+				return is_array($_POST[$field]) ? $_POST[$field] : strip_tags($_POST[$field]);
+			} else {
+				return null;
+			}
 		} 
 	}
 
@@ -70,10 +80,10 @@ class Form {
 			foreach ($_POST as $key => $value) {
 				if (!empty($expected)) {
 					if (in_array($key, $expected)) {
-						$out[$key] = strip_tags($value);
+						$out[$key] = is_array($value) ? $value : strip_tags($value);
 					}
 				} else {
-					$out[$key] = strip_tags($value);
+					$out[$key] = is_array($value) ? $value : strip_tags($value);
 				}
 			}
 		}

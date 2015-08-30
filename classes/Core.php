@@ -1,47 +1,41 @@
-<?php 
-
-class Core
-{
-	
-	public function run() {
-		ob_start();
-		// $uri = $_SERVER['REQUEST_URI'];
-
-		// $uri = Url::removeSlash($uri);
-  //       $uri = explode('/', $uri);
-		
-		// $path = Url::removeSlash(ROOT_PATH, DS);
-		// $path = explode(DS, $path);
-	
-		// $root_folder = end($path);
-
-		// if ($uri[0] == $root_folder) {
-		// 	array_shift($uri);
-		// }
-
-		
-		// //$uri = Url::getUri(); 
-		// // trong truong hop $uri chi gom domain name thi array $uri van co first element va element rong
-
-		// $first = $uri[0];
-		// switch ($first) {
-		// 	case "":
-		// 		$this->_cPage = "index";
-		// 		break;
-
-		// 	case $this->$_admin:
-		// 		# code...
-		// 		break;
-
-		// 	case $this->$_college_url:
-		// 		$this->_cPage = $this->_college_temp;
-		// 		break;
-			
-		// 	default:
-		// 		$this->_cPage = $this->_article_temp;
-		// }
-		$objUrl = new Url();
-		require_once($objUrl->getPage());
-		ob_get_flush();
-	}
-}
+<?php
+    class Core {
+        
+        public $objUrl;
+        public $objNavigation;
+        // public $objAdmin;
+        
+        public $_meta_title = 'E-commerce project';
+        public $_meta_description = 'E-commerce project';
+        public $_meta_keywords = 'E-commerce project';
+        
+        public function __construct() {
+            $this->objUrl = new Url();
+            $this->objNavigation = new Navigation($this->objUrl);
+        }
+        
+        public function run() {
+            ob_start();
+            switch(Url::$_first) {
+                case 'admin' :
+                    set_include_path(implode(PATH_SEPARATOR, array( //path separator la de phan tach cac path noi chung va include path noi rieng
+                        realpath(ROOT_PATH.DS.'admin'.DS.TEMPLATE_DIR),
+                        realpath(ROOT_PATH.DS.'admin'.DS.PAGES_DIR),
+                        get_include_path() //lay nhung duong dan mac dinh trong include path trong file php.ini cua server
+                    )));
+                    $this->objAdmin = new Admin();
+                    require_once(ROOT_PATH.DS.'admin'.DS.PAGES_DIR.DS.$this->objUrl->_cPage.'.php');
+                break;
+                default:
+                    set_include_path(implode(PATH_SEPARATOR, array( //path separator la de phan tach cac path noi chung va include path noi rieng
+                        realpath(ROOT_PATH.DS.TEMPLATE_DIR),
+                        realpath(ROOT_PATH.DS.PAGES_DIR),
+                        get_include_path() //lay nhung duong dan mac dinh trong include path trong file php.ini cua server
+                    )));
+                    require_once(ROOT_PATH.DS.PAGES_DIR.DS.$this->objUrl->_cPage.'.php'); 
+                    //construct cua Url se goi method process, method process se tra va _cPage
+            }
+            ob_get_flush();            
+        }
+    }
+?>
