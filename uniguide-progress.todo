@@ -1,0 +1,9 @@
+ Scraping: 
+  ☐ refactor master-scraping to turn the result array into an associative array instead of a numeric array as it is now
+  ☐ load and add data to form using for loop
+
+Framework Researching:
+  ☐ ask Braught whether to SWITCH to a PHP framework-- switching and learning costs
+
+UX:
+  ☐ figure how to make sticky text field without using $_POST

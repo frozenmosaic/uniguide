@@ -2,53 +2,185 @@
 global $college_data;
 $college_data = array();
 
-function addToList($name = null, $source = null, $attr = "class") {
+/**
+ * EXTRACT DATA
+ */
+
+// function getXPath($source = null) {
+// 	$doc = new DOMDocument();
+//     $doc->loadHTML($source);
+//     $xpath = new DOMXPATH($doc);
+// }
+
+/**
+ * Use XPath to extract data from HTML string.
+ * @param [type] $attr_name [value of attribute of data]
+ * @param [type] $source    [source string]
+ * @param [type] $key       [key of data in JSON object]
+ * @param string $attr      [type of attribute to fetch data]
+ */
+function addToList($attr_val = null, $source = null, $key = null, $attr = "class") {
     global $college_data;
+    // getXPath($source);
     $doc = new DOMDocument();
     $doc->loadHTML($source);
     $xpath = new DOMXPATH($doc);
-    
-    $results = $xpath->query("//*[@" . $attr . "='" . $name . "']");
+
+    $results = $xpath->query("//*[@" . $attr . "='" . $attr_val . "']");
     
     if ($results->length > 0) {
         foreach ($results as $res) {
-            $college_data[] = $res->nodeValue;
+            $college_data[$key] = $res->nodeValue;
         }
     }
+}
+
+function addArrayToList() {
+
 }
 
 /*
 School Name 
 Type
-City & State 
+City 
+State 
 */
 
-addToList("museoSeven gray hdXLrg bold inline margin10 marginRightOnly", $_POST['cb_glance']);
-addToList("rankings-category", $_POST['usn']);
-addToList("addressLocality", $_POST['cb_glance'], "itemprop");
-addToList("addressRegion", $_POST['cb_glance'], "itemprop");
+addToList("museoSeven gray hdXLrg bold inline margin10 marginRightOnly", $_POST['cb_glance'], "name");
+addToList("rankings-category", $_POST['usn'], "type");
+addToList("addressLocality", $_POST['cb_glance'], "city", "itemprop");
+addToList("addressRegion", $_POST['cb_glance'], "state", "itemprop");
 
 /*
 Admission Stats: RD, WL, ED & EA
-Admission Criteria
 */
 
-addToList("defTitle2 copySm ltGray", $_POST['cb_app']);
-addToList("defDesc2 copySm gray", $_POST['cb_app']);
+$doc = new DOMDocument();
+$doc->loadHTML($_POST['cb_app']);
+$xpath = new DOMXPATH($doc);
 
-addToList("smallDottedList arial copySm ltGray padBottom20 visible", $_POST['cb_app']);
+$attr = "class";
+$attr_val = "defDesc2 copySm gray";
+
+$ad_stats = array();
+
+$exp = "//*[@" . $attr . "='" . $attr_val . "']";
+$results = $xpath->query($exp);
+
+foreach ($results as $stat) {
+	$ad_stats[] = $stat->textContent;
+}
+$college_data["ad_stats"] = $ad_stats;
+
+/*
+Admission Criteria
+ */
+
+$attr = "class";
+$name = "smallDottedList arial copySm ltGray padBottom20 visible";
+
+$doc = new DOMDocument();
+$doc->loadHTML($_POST['cb_app']);
+$xpath = new DOMXPATH($doc);
+
+$separator = array();
+$exp = "//ul[@" . $attr . "='" . $name . "']";
+$results = $xpath->query($exp);
+
+for($i=0; $i < $results->length; $i++) {
+	$node = $results->item($i);
+
+	global $college_data;
+	$crit_group = array();
+
+	$children = $node->childNodes;
+
+	for ($j=0; $j < $children->length; $j = $j+2) {
+		$crit_group[] = $children->item($j)->nodeValue;
+	}
+	$college_data["crits_" . $i] = $crit_group;
+
+}
+
 
 /*
 SAT Ranges & Percentiles
 */
 
-addToList("grid_1 grid_1_ao alpha museoSeven copyMed", $_POST['cb_sat_cr']);
-addToList("grid_1 grid_1_ao alpha museoSeven copyMed", $_POST['cb_sat_wr']);
-addToList("grid_1 grid_1_ao alpha museoSeven copyMed", $_POST['cb_sat_m']);
+/*=== ranges ===*/
+// addToList("grid_1 grid_1_ao alpha museoSeven copyMed", $_POST['cb_sat_cr'], "sat_ranges");
+$doc = new DOMDocument();
+$doc->loadHTML($_POST['cb_sat_cr']);
+$xpath = new DOMXPATH($doc);
 
-addToList("percentageBarDisplayText padTen padLeftOnly copyXXLrg museoSeven gray", $_POST['cb_sat_cr']);
-addToList("percentageBarDisplayText padTen padLeftOnly copyXXLrg museoSeven gray", $_POST['cb_sat_wr']);
-addToList("percentageBarDisplayText padTen padLeftOnly copyXXLrg museoSeven gray", $_POST['cb_sat_m']);
+$attr = "class";
+$attr_val = "grid_1 grid_1_ao alpha museoSeven copyMed";
+
+$ad_stats = array();
+
+$exp = "//*[@" . $attr . "='" . $attr_val . "']";
+$results = $xpath->query($exp);
+
+foreach ($results as $stat) {
+	$ad_stats[] = $stat->textContent;
+}
+$college_data["sat_ranges"] = $ad_stats;
+
+/*=== percentiles ===*/
+// addToList("percentageBarDisplayText padTen padLeftOnly copyXXLrg museoSeven gray", $_POST['cb_sat_cr']);
+$doc = new DOMDocument();
+$doc->loadHTML($_POST['cb_sat_cr']);
+$xpath = new DOMXPATH($doc);
+
+$attr = "class";
+$attr_val = "percentageBarDisplayText padTen padLeftOnly copyXXLrg museoSeven gra";
+
+$ad_stats = array();
+
+$exp = "//*[@" . $attr . "='" . $attr_val . "']";
+$results = $xpath->query($exp);
+
+foreach ($results as $stat) {
+	$ad_stats[] = $stat->textContent;
+}
+$college_data["cr"] = $ad_stats;
+
+// addToList("percentageBarDisplayText padTen padLeftOnly copyXXLrg museoSeven gray", $_POST['cb_sat_wr']);
+
+$doc = new DOMDocument();
+$doc->loadHTML($_POST['cb_sat_wr']);
+$xpath = new DOMXPATH($doc);
+
+$attr = "class";
+$attr_val = "percentageBarDisplayText padTen padLeftOnly copyXXLrg museoSeven gra";
+
+$ad_stats = array();
+
+$exp = "//*[@" . $attr . "='" . $attr_val . "']";
+$results = $xpath->query($exp);
+
+foreach ($results as $stat) {
+	$ad_stats[] = $stat->textContent;
+}
+$college_data["wr"] = $ad_stats;
+
+// addToList("percentageBarDisplayText padTen padLeftOnly copyXXLrg museoSeven gray", $_POST['cb_sat_m']);
+$doc = new DOMDocument();
+$doc->loadHTML($_POST['cb_sat_m']);
+$xpath = new DOMXPATH($doc);
+
+$attr = "class";
+$attr_val = "percentageBarDisplayText padTen padLeftOnly copyXXLrg museoSeven gra";
+
+$ad_stats = array();
+
+$exp = "//*[@" . $attr . "='" . $attr_val . "']";
+$results = $xpath->query($exp);
+
+foreach ($results as $stat) {
+	$ad_stats[] = $stat->textContent;
+}
+$college_data["m"] = $ad_stats;
 
 /*
 Fin Aid
@@ -99,5 +231,11 @@ foreach ($array->data as $arr) {
     $college_data[] = $arr->value;
 }
 
-// echo json_encode($college_data);
-print_r($college_data);
+/**
+ * EDIT AND CLEAN UP DATA
+ */
+$college_data[3] = substr($college_data[3], 2);
+
+echo json_encode($college_data);
+?>
+
