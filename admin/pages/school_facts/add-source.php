@@ -10,7 +10,7 @@ require_once ('_header.php');
 echo root() . '/' . 'admin/scraping/master-scraping.php'; ?>">
     <table cellpadding="0" cellspacing="0" border="0" class="tbl_insert">
         
-        <!-- <tr>
+        <tr>
             <th><label for="usn">US News: *</label></th>
             <td><?php
 echo $objValid->validate('src'); ?>
@@ -25,7 +25,7 @@ echo $objValid->validate('src'); ?>
             <label class="warn" id="cb_glance-label"></label>
             <input type="text" name="cb_glance" id="cb_glance" value="<?php
 echo $objForm->stickyText('cb_glance'); ?>" class="fld"   cols="70"/></td>
-        </tr> -->
+        </tr>
 
         <tr>
             <th><label for="cb_app">CB - Applying: *</label></th>
@@ -36,7 +36,7 @@ echo $objValid->validate('src'); ?>
 echo $objForm->stickyText('cb_app'); ?>" class="fld"   cols="70"/></td>
         </tr>
 
-        <!-- <tr>
+        <tr>
             <th><label for="cb_sat_cr">CB - SAT/CR: *</label></th>
             <td><?php
 echo $objValid->validate('src'); ?>
@@ -88,7 +88,7 @@ echo $objValid->validate('src'); ?>
             <label class="warn" id="intl-label"></label>
             <input  name="intl" id="intl" value="<?php
 echo $objForm->stickyText('intl'); ?>" class="fld"   cols="70"/></td>
-        </tr> -->
+        </tr>
 
         <tr>
             <th>&nbsp;</th>
@@ -96,15 +96,6 @@ echo $objForm->stickyText('intl'); ?>" class="fld"   cols="70"/></td>
         </tr>
     </table>
 </form>
-
-<!-- <form id="view">
-    <table cellpadding="0" cellspacing="0" border="0" class="tbl_insert">
-        <th>Name</th>
-        <tr>
-            <input type="text" name="test" id="test" class="1 fld" value="" />        
-        </tr>
-    </table>
-</form> -->
 
 <?php
 require_once ('_footer.php'); ?>
