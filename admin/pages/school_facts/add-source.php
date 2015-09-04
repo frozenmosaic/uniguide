@@ -10,7 +10,7 @@ require_once ('_header.php');
 echo root() . '/' . 'admin/scraping/master-scraping.php'; ?>">
     <table cellpadding="0" cellspacing="0" border="0" class="tbl_insert">
         
-        <tr>
+        <!-- <tr>
             <th><label for="usn">US News: *</label></th>
             <td><?php
 echo $objValid->validate('src'); ?>
@@ -61,7 +61,7 @@ echo $objValid->validate('src'); ?>
             <label class="warn" id="cb_sat_wr-label"></label>
             <input  name="cb_sat_wr" id="cb_sat_wr" value="<?php
 echo $objForm->stickyText('cb_sat_wr'); ?>" class="fld"   cols="70"/></td>
-        </tr>
+        </tr> -->
 
         <tr>
             <th><label for="pop_majors">CB - Popular Majors: *</label></th>
@@ -81,14 +81,14 @@ echo $objValid->validate('src'); ?>
 echo $objForm->stickyText('majors'); ?>" class="fld"   cols="70"/></td>
         </tr>
 
-        <tr>
+        <!-- <tr>
             <th><label for="intl">CB - International: *</label></th>
             <td><?php
 echo $objValid->validate('src'); ?>
             <label class="warn" id="intl-label"></label>
             <input  name="intl" id="intl" value="<?php
 echo $objForm->stickyText('intl'); ?>" class="fld"   cols="70"/></td>
-        </tr>
+        </tr> -->
 
         <tr>
             <th>&nbsp;</th>

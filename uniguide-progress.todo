@@ -1,9 +1,22 @@
- Scraping: 
-  ☐ refactor master-scraping to turn the result array into an associative array instead of a numeric array as it is now
-  ☐ load and add data to form using for loop
+ CMS: 
+  ☐ finished loading preview form.
+  ☐ ABSOLUTELY HAVE TO do sticky text. too painful to paste all 9 source codes all over again and again for testing.
+  ☐ append name of source code next to input field label
+  ☐ next step: add data into database.
+
+Front: 
+  ☐ build home page
 
 Framework Researching:
-  ☐ ask Braught whether to SWITCH to a PHP framework-- switching and learning costs
+  ☐ ask Hieu whether to SWITCH to a PHP framework-- switching and learning costs
 
 UX:
-  ☐ figure how to make sticky text field without using $_POST
+  ☐ handle source code input error (wrong source code into wrong input field)
+  ☐ sticky text: 
+  *for developers: simply use jquery to store all source codes
+  *for end-users: 
+  two layers of submitting -- "populate" to extract data and populate into preview form, and "submit" to add data to database. 
+  first layer of submitting: no specific reason to use sticky text since the page is not being reloaded
+  second layer of submitting: could go back to using $_POST
+  ☐ another problem presents, however:
+  in case the end-users have to reload the page, for any reasons including system, network, browser, etc. errors, how to make the texts stay in the input field?
