@@ -22,6 +22,7 @@ class Url {
 		// trong truong hop $uri chi gom domain name thi array $uri van co first element va element rong
 
 		$first = $uri[0];
+		$first = "first here";
 		self::$_first = $first;
 
 		switch ($first) {

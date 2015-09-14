@@ -1,4 +1,4 @@
-function validate() {
+unction validate() {
     var error = new Array();
     $('input:text').each(function() {
         var labelId = $(this).attr('id') + "-label";

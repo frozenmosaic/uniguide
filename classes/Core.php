@@ -11,6 +11,7 @@
         
         public function __construct() {
             $this->objUrl = new Url();
+            echo "$this->objUrl->uri";
             $this->objNavigation = new Navigation($this->objUrl);
         }
         

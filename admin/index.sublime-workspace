@@ -1,0 +1,936 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"p",
+				"php	<?php … ?>"
+			],
+			[
+				"url",
+				"urlencode"
+			],
+			[
+				"ob",
+				"objValid"
+			],
+			[
+				"o",
+				"objValid"
+			],
+			[
+				"sr",
+				"srch"
+			],
+			[
+				"json",
+				"json_encode"
+			],
+			[
+				"oj",
+				"objUser"
+			],
+			[
+				"def",
+				"defined"
+			],
+			[
+				"f",
+				"first"
+			],
+			[
+				"ur",
+				"uri"
+			],
+			[
+				"re",
+				"req1	require_once …"
+			],
+			[
+				"ex",
+				"exclude"
+			],
+			[
+				"params",
+				"params"
+			],
+			[
+				"par",
+				"params"
+			],
+			[
+				"para",
+				"param"
+			],
+			[
+				"array_ke",
+				"array_key_exists"
+			],
+			[
+				"ite",
+				"itemRaw"
+			],
+			[
+				"_Tab",
+				"_table_2"
+			],
+			[
+				"met",
+				"meta_description"
+			],
+			[
+				"meta",
+				"meta_description"
+			],
+			[
+				"fet",
+				"fetchAll"
+			],
+			[
+				"_tab",
+				"_table_2"
+			],
+			[
+				"s",
+				"sql"
+			],
+			[
+				"id",
+				"identity"
+			],
+			[
+				"obj",
+				"objUrl"
+			],
+			[
+				"pu",
+				"public"
+			],
+			[
+				"is_nu",
+				"is_numeric"
+			],
+			[
+				"stat",
+				"static"
+			],
+			[
+				"cp",
+				"cpage"
+			],
+			[
+				"key",
+				"key_page"
+			],
+			[
+				"array_s",
+				"array_shift"
+			],
+			[
+				"str_re",
+				"str_replace"
+			],
+			[
+				"null",
+				"null"
+			],
+			[
+				"sp",
+				"splitRaw"
+			],
+			[
+				"u",
+				"uri"
+			],
+			[
+				"la",
+				"lane"
+			],
+			[
+				"fish",
+				"fishGroup"
+			],
+			[
+				"ge",
+				"generateFishTimer"
+			],
+			[
+				"add",
+				"addChild"
+			],
+			[
+				"e",
+				"elapsed"
+			],
+			[
+				"En",
+				"ENTER_FRAME"
+			],
+			[
+				"Scene",
+				"SceneGameOver"
+			],
+			[
+				"Sc",
+				"SceneGame"
+			],
+			[
+				"tou",
+				"touchToRestart"
+			],
+			[
+				"scor",
+				"scoreLabel"
+			],
+			[
+				"sco",
+				"scoreLabel"
+			],
+			[
+				"tex",
+				"textAlign"
+			],
+			[
+				"gam",
+				"gameOverLabel"
+			],
+			[
+				"sc",
+				"scoreTimer"
+			],
+			[
+				"set",
+				"setScore"
+			],
+			[
+				"te",
+				"text"
+			],
+			[
+				"ic",
+				"iceGroup"
+			],
+			[
+				"ice",
+				"iceGroup"
+			],
+			[
+				"ro",
+				"rotationSpeed"
+			],
+			[
+				"y",
+				"ySpeed"
+			],
+			[
+				"as",
+				"assets"
+			],
+			[
+				"lane",
+				"lane"
+			],
+			[
+				"lan",
+				"laneWidth"
+			],
+			[
+				"eve",
+				"eventParam"
+			],
+			[
+				"ani",
+				"animationDuration"
+			],
+			[
+				"ev",
+				"eventParam"
+			],
+			[
+				"and",
+				"animationDuration"
+			],
+			[
+				"pen",
+				"penguin"
+			],
+			[
+				"em",
+				"email"
+			],
+			[
+				"_",
+				"_table"
+			],
+			[
+				"h",
+				"h1	Tag"
+			],
+			[
+				"or",
+				"orders"
+			],
+			[
+				"j",
+				"j.u	java.util."
+			],
+			[
+				"is_a",
+				"is_array"
+			],
+			[
+				"array_k",
+				"array_key_exists"
+			],
+			[
+				"_ta",
+				"_table"
+			],
+			[
+				"st",
+				"stat"
+			],
+			[
+				"op",
+				"option	Tag"
+			],
+			[
+				"fo",
+				"for	Attr"
+			],
+			[
+				"count",
+				"countries"
+			],
+			[
+				"enco",
+				"encodeHtml"
+			],
+			[
+				"IN",
+				"INTO"
+			],
+			[
+				"private",
+				"private"
+			],
+			[
+				"_i",
+				"_id"
+			],
+			[
+				"date",
+				"date"
+			],
+			[
+				"_t",
+				"_table_3"
+			],
+			[
+				"sta",
+				"status"
+			],
+			[
+				"qu",
+				"query"
+			],
+			[
+				"n",
+				"name"
+			],
+			[
+				"categ",
+				"category"
+			],
+			[
+				"th",
+				"this"
+			],
+			[
+				"pr",
+				"product"
+			],
+			[
+				"a",
+				"a	Tag"
+			],
+			[
+				"fun",
+				"fun	function …"
+			],
+			[
+				"esca",
+				"escape"
+			],
+			[
+				"for",
+				"foreach	foreach …"
+			],
+			[
+				"tab",
+				"_table"
+			],
+			[
+				"fu",
+				"fun	function …"
+			],
+			[
+				"dt",
+				"data"
+			],
+			[
+				"bas",
+				"basket"
+			],
+			[
+				"clas",
+				"class	class …"
+			],
+			[
+				"prin",
+				"print_r"
+			],
+			[
+				"_nu",
+				"_numb_of_pages"
+			],
+			[
+				"rec",
+				"records"
+			],
+			[
+				"_num",
+				"_numb_of_pages"
+			],
+			[
+				"ma",
+				"_max_pp"
+			],
+			[
+				"geti",
+				"getimagesize"
+			],
+			[
+				"fetc",
+				"fetchAll"
+			],
+			[
+				"cata",
+				"objCatalogue"
+			],
+			[
+				"els",
+				"else"
+			],
+			[
+				"cat",
+				"category"
+			],
+			[
+				"is_",
+				"is_array"
+			],
+			[
+				"mysql_in",
+				"mysql_insert_id"
+			],
+			[
+				"mysql_fet",
+				"mysql_fetch_assoc"
+			],
+			[
+				"q",
+				"query"
+			],
+			[
+				"func",
+				"function"
+			],
+			[
+				"mysql",
+				"mysql_error"
+			],
+			[
+				"mys",
+				"mysql_query"
+			],
+			[
+				"mysql_re",
+				"mysql_real_escape_string"
+			],
+			[
+				"conn",
+				"connection"
+			],
+			[
+				"con",
+				"connect"
+			],
+			[
+				"function",
+				"function"
+			],
+			[
+				"ob_get",
+				"ob_get_flush"
+			],
+			[
+				"PA",
+				"PAGES_DIR"
+			],
+			[
+				"rea",
+				"realpath"
+			],
+			[
+				"array",
+				"array"
+			],
+			[
+				"de",
+				"define"
+			],
+			[
+				"temp",
+				"templates"
+			],
+			[
+				"class",
+				"classes"
+			],
+			[
+				"req",
+				"req1	require_once …"
+			],
+			[
+				"cl",
+				"class	class …"
+			],
+			[
+				"cla",
+				"class_name"
+			],
+			[
+				"exp",
+				"explode"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 400.0,
+		"last_filter": "inst",
+		"selected_items":
+		[
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"php",
+				"Set Syntax: PHP"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: in",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: pack",
+				"Package Control: Install Package"
+			],
+			[
+				"Set Syntax: PHP",
+				"Set Syntax: PHP"
+			],
+			[
+				"",
+				"Set Syntax: LaTeX Log"
+			]
+		],
+		"width": 536.0
+	},
+	"console":
+	{
+		"height": 120.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Program Files/xampp/htdocs/e_commerce/admin/pages/clients/list.php",
+		"/C/Program Files/xampp/htdocs/e_commerce/admin/pages/categories/remove.php",
+		"/C/Program Files/xampp/htdocs/e_commerce/classes/Url.php",
+		"/C/Program Files/xampp/htdocs/e_commerce/admin/pages/clients.php",
+		"/C/Program Files/xampp/htdocs/e_commerce/admin/pages/orders/remove.php",
+		"/C/Program Files/xampp/htdocs/e_commerce/admin/pages/orders/edited.php",
+		"/C/Program Files/xampp/htdocs/e_commerce/admin/pages/orders/edit.php",
+		"/C/Program Files/xampp/htdocs/e_commerce/admin/pages/orders/list.php",
+		"/C/Program Files/xampp/htdocs/e_commerce/admin/pages/orders.php",
+		"/C/Program Files/xampp/htdocs/e_commerce/admin/pages/categories/edit.php",
+		"/C/Program Files/xampp/htdocs/e_commerce/admin/pages/products/added.php",
+		"/C/Program Files/xampp/htdocs/e_commerce/admin/pages/products.php",
+		"/C/Program Files/xampp/htdocs/e_commerce/admin/pages/categories/add.php",
+		"/C/Program Files/xampp/htdocs/e_commerce/admin/pages/products/add.php",
+		"/C/Program Files/xampp/htdocs/e_commerce/admin/pages/products/list.php",
+		"/C/Program Files/xampp/htdocs/e_commerce/admin/template/_header.php",
+		"/C/Program Files/xampp/htdocs/e_commerce/pages/catalogue-item.php",
+		"/C/Program Files/xampp/htdocs/e_commerce/admin/pages/index.php",
+		"/C/Program Files/xampp/htdocs/e_commerce/admin/index.php",
+		"/C/Program Files/xampp/htdocs/e_commerce/mod/resend.php",
+		"/C/Program Files/xampp/htdocs/e_commerce/pages/catalogue.php",
+		"/C/Program Files/xampp/htdocs/e_commerce/pages/activate.php",
+		"/C/Program Files/xampp/htdocs/e_commerce/classes/User.php",
+		"/C/Program Files/xampp/htdocs/e_commerce/pages/login.php",
+		"/C/Program Files/xampp/htdocs/e_commerce/pages/logout.php",
+		"/C/Program Files/xampp/htdocs/e_commerce/index.php",
+		"/C/Program Files/xampp/htdocs/e_commerce/classes/Login.php",
+		"/C/Program Files/xampp/htdocs/e_commerce/mod/basket_view.php",
+		"/C/Program Files/xampp/htdocs/e_commerce/pages/checkout.php",
+		"/C/Program Files/xampp/htdocs/e_commerce/pages/basket.php",
+		"/C/Program Files/xampp/htdocs/e_commerce/classes/Navigation.php",
+		"/C/Program Files/xampp/htdocs/e_commerce/template/_header.php",
+		"/C/Program Files/xampp/htdocs/e_commerce/classes/Catalogue.php",
+		"/C/Program Files/xampp/htdocs/e_commerce/inc/config.php",
+		"/C/Program Files/xampp/htdocs/e_commerce/classes/Core.php",
+		"/C/Program Files/xampp/htdocs/e_commerce/classes/Helper.php",
+		"/C/Program Files/xampp/htdocs/e_commerce/inc/autoload.php",
+		"/C/Program Files/xampp/htdocs/e_commerce/.htaccess",
+		"/C/Program Files/xampp/htdocs/e_commerce/classes/Paging.php",
+		"/C/Program Files/xampp/htdocs/e_commerce/mod/basket_left.php",
+		"/C/Program Files/xampp/htdocs/e_commerce/media/catalogue/bali-island.jpg",
+		"/C/Program Files/xampp/htdocs/e_commerce/js/basket.js",
+		"/C/Program Files/xampp/htdocs/e_commerce/classes/Basket.php",
+		"/C/Program Files/xampp/htdocs/e_commerce/css/core.css",
+		"/C/Program Files/xampp/htdocs/penguindive/js/main.js",
+		"/C/Program Files/xampp/htdocs/final/js/main.js",
+		"/C/Users/Mai/Projects/penguindive/index.html",
+		"/C/Users/Mai/Projects/penguindive/js/main.js",
+		"/C/Program Files/xampp/htdocs/e_commerce/admin/pages/business/edit.php",
+		"/C/Program Files/xampp/htdocs/e_commerce/classes/Business.php",
+		"/C/Program Files/xampp/htdocs/e_commerce/admin/pages/business/edited.php",
+		"/C/Program Files/xampp/htdocs/e_commerce/admin/pages/logout.php",
+		"/C/Program Files/xampp/htdocs/e_commerce/admin/pages/business.php",
+		"/C/Program Files/xampp/htdocs/e_commerce/admin/pages/business/remove.php",
+		"/C/Program Files/xampp/htdocs/e_commerce/admin/pages/clients/remove.php",
+		"/C/Program Files/xampp/htdocs/e_commerce/admin/pages/categories/list.php",
+		"/C/Program Files/xampp/htdocs/e_commerce/classes/Order.php",
+		"/C/Users/Mai/Desktop/helloWorld.java",
+		"/C/Program Files/xampp/htdocs/e_commerce/admin/pages/orders/edited-failed.php",
+		"/C/Program Files/xampp/htdocs/e_commerce/classes/Country.php",
+		"/C/Program Files/xampp/htdocs/e_commerce/classes/Dbase.php",
+		"/C/Program Files/xampp/htdocs/e_commerce/admin/pages/error.php",
+		"/C/Program Files/xampp/htdocs/e_commerce/classes/Validation.php",
+		"/C/Program Files/xampp/htdocs/e_commerce/admin/pages/categories/added-failed.php",
+		"/C/Program Files/xampp/htdocs/e_commerce/admin/pages/categories/added.php",
+		"/C/Program Files/xampp/htdocs/e_commerce/admin/pages/categories.php",
+		"/C/Program Files/xampp/htdocs/e_commerce/admin/pages/products/edited-no-upload.php",
+		"/C/Program Files/xampp/htdocs/e_commerce/admin/pages/products/remove.php",
+		"/C/Program Files/xampp/htdocs/e_commerce/admin/pages/products/edited-failed.php",
+		"/C/Program Files/xampp/htdocs/e_commerce/admin/pages/products/edited.php",
+		"/C/Program Files/xampp/htdocs/e_commerce/admin/pages/products/edit.php",
+		"/C/Program Files/xampp/htdocs/e_commerce/admin/pages/products/added-no-upload.php",
+		"/C/Program Files/xampp/htdocs/e_commerce/admin/pages/products/added-failed.php",
+		"/C/Users/Mai/AppData/Roaming/Sublime Text 3/Packages/User/SublimeLinter.sublime-settings",
+		"/C/Users/Mai/AppData/Roaming/Sublime Text 3/Packages/SublimeLinter/SublimeLinter.sublime-settings",
+		"/C/Users/Mai/AppData/Roaming/Sublime Text 3/Packages/User/PHP.sublime-settings",
+		"/C/Users/Mai/Desktop/index.php",
+		"/C/Program Files/xampp/htdocs/e_commerce/classes/newClass.php",
+		"/C/Program Files/xampp/htdocs/e_commerce/mod/basket.php",
+		"/C/Program Files/xampp/htdocs/e_commerce/classes/Session.php",
+		"/C/Users/Mai/Downloads/thank-you-for-downloading-phpdesigner.php",
+		"/C/Program Files/xampp/htdocs/e_commerce/template/_footer.php",
+		"/C/Program Files/xampp/htdocs/e_commerce/classes/Application.php",
+		"/C/Program Files/xampp/htdocs/e_commerce/pages/error.php",
+		"/C/Program Files/xampp/htdocs/e-commerce/pages/index.php",
+		"/C/Program Files/xampp/htdocs/e-commerce/classes/Core.php",
+		"/C/Program Files/xampp/htdocs/e-commerce/inc/config.php",
+		"/C/Program Files/xampp/htdocs/e-commerce/inc/autoload.php",
+		"/C/Program Files/xampp/htdocs/e-commerce/classes/Url.php",
+		"/C/Program Files/xampp/htdocs/e-commerce/index.php",
+		"/C/Program Files/xampp/htdocs/e-commerce/template/_footer.php",
+		"/C/Program Files/xampp/htdocs/e-commerce/template/_header.php",
+		"/C/Users/Mai/_header.php",
+		"/C/Program Files/xampp/htdocs/PHP_Projects/projects.html",
+		"/C/Program Files/xampp/htdocs/PHP_Projects/homepage.html",
+		"/C/Program Files/xampp/htdocs/PHP_Projects/about.html",
+		"/C/Program Files/xampp/htdocs/PHP_Projects/contact.html",
+		"/C/Program Files/xampp/htdocs/PHP_Projects/form_validation_eg.php",
+		"/C/Program Files/xampp/htdocs/PHP_Projects/includes/header.html",
+		"/C/Program Files/xampp/htdocs/PHP_Projects/header.php",
+		"/C/Program Files/xampp/htdocs/PHP_Projects/multi.php",
+		"/C/Users/Mai/Desktop/example.html",
+		"/C/Program Files/xampp/htdocs/PHP_Projects/index.php",
+		"/C/Program Files/xampp/htdocs/PHP_Projects/point-of-view-in-life.html",
+		"/C/Program Files/xampp/htdocs/PHP_Projects/projects",
+		"/C/Users/Mai/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/C/Users/Mai/AppData/Roaming/Sublime Text 3/Packages/User/Package Control.sublime-settings",
+		"/C/Users/Mai/Projects/C projects/Not finished/Ski Design/skidesign.out",
+		"/C/Users/Mai/Projects/C projects/Not finished/Ski Design/skidesign.in",
+		"/C/Program Files/xampp/htdocs/PHP_Projects/script2.php",
+		"/C/Program Files (x86)/CodeBlocks/themes.conf.xml",
+		"/C/Users/Mai/AppData/Roaming/Sublime Text 3/Packages/User/bh_core.sublime-settings",
+		"/C/Users/Mai/AppData/Roaming/Sublime Text 3/Packages/BracketHighlighter/bh_core.sublime-settings",
+		"/C/Program Files/xampp/htdocs/PHP_Projects/calculator.php",
+		"/C/Users/Mai/Desktop/file.c",
+		"/C/Users/Mai/Projects/HTML projects/page18.html",
+		"/C/Program Files/xampp/htdocs/PHP_Projects/lists-tables-and-forms.html",
+		"/C/Users/Mai/Projects/HTML projects/List Table and Forms",
+		"/C/Users/Mai/Projects/HTML projects/images.html",
+		"/C/Users/Mai/Projects/HTML projects/images.hmtl",
+		"/C/Users/Mai/Projects/HTML projects/layout.html"
+	],
+	"find":
+	{
+		"height": 36.0
+	},
+	"find_in_files":
+	{
+		"height": 92.0,
+		"where_history":
+		[
+			"C:\\Program Files\\xampp\\htdocs\\e_commerce\\admin\\pages\\categories"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"Url",
+			"getCur",
+			"getCu",
+			"admin",
+			"registered",
+			"php",
+			"<?",
+			"getUser",
+			"href",
+			"getCurr",
+			"_url",
+			"single",
+			"href",
+			"print_r",
+			"print",
+			"print)r",
+			"print",
+			"print_r",
+			"cpage",
+			"module",
+			"get",
+			"getCategory",
+			"isDupli",
+			"getRaw",
+			"splitRaw",
+			"href",
+			"count",
+			"href",
+			"print_r",
+			"$main",
+			"get",
+			"getCurrent",
+			"module",
+			"active",
+			"Raw",
+			"params",
+			"href(",
+			"active",
+			"explode",
+			"objUser",
+			">\n",
+			"products",
+			"Address",
+			"/$",
+			"']);",
+			">\n",
+			"}\n",
+			"\"\";\n",
+			"data"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 30.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "index.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"clients",
+				"admin\\pages\\clients.php"
+			],
+			[
+				"list",
+				"admin\\pages\\clients\\list.php"
+			],
+			[
+				"reomv",
+				"admin\\pages\\orders\\remove.php"
+			],
+			[
+				"edited",
+				"admin\\pages\\orders\\edited.php"
+			],
+			[
+				"edit",
+				"admin\\pages\\orders\\edit.php"
+			],
+			[
+				"remove",
+				"admin\\pages\\categories\\remove.php"
+			],
+			[
+				"add",
+				"admin\\pages\\categories\\add.php"
+			],
+			[
+				"pro",
+				"admin\\pages\\products.php"
+			],
+			[
+				"products",
+				"admin\\pages\\products.php"
+			],
+			[
+				"_header",
+				"admin\\template\\_header.php"
+			],
+			[
+				"index",
+				"admin\\pages\\index.php"
+			],
+			[
+				"navi",
+				"classes\\Navigation.php"
+			],
+			[
+				"",
+				"classes\\Url.php"
+			],
+			[
+				"login",
+				"pages\\login.php"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 200.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

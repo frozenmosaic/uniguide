@@ -6,7 +6,7 @@
 <body>
 <div id="header">
 	<div id="header_in">
-		<h5><a href="/">Uni-Guide</a></h5>
+		<h5><a href="/uniguide_15">Uni-Guide</a></h5>
 		<?php 
 			if (Login::isLogged(Login::$_login_front)) {
 				echo '<div id="logged_as">Logged in as: <strong>';
