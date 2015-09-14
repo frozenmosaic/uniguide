@@ -1,18 +1,11 @@
-<?php 
-
-
-$array = array();
-
-function addArray() {
-	$array[] = 1;
-	print_r($array);
+<?php
+function getHi() {
+	echo "Hi";
 }
 
-addArray();
+function sayHi() {
+	getHi();
+}
 
-
-
+sayHi();
 ?>
-
-
-

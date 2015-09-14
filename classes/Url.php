@@ -8,7 +8,7 @@ class Url {
 
 	public $_admin = "admin"; // first element cua admin panel
 	private $_college_Url = "du-lieu-truong"; // name of college database
-	private $_article_temp = "article"; // name of articleicle template page
+	private $_article_temp = "article"; // name of article template page
 	private $_college_temp = "college"; // name of college profile template page
 
 	public function __construct() {
