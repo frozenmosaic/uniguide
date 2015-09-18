@@ -68,5 +68,9 @@ class Article extends Application {
 		}
 		return false;
 	}
+
+	public function index() {
+		echo "Hello World!";
+	}
 }
 ?>

@@ -1,5 +1,5 @@
 <?php 
-class Application {
+class Application extends CI_Controller {
 
 	public $db;
 
