@@ -25,6 +25,7 @@
     //dau hai cham la de nhay ve truoc mot tang folder
     //ket qua la quay ve thu muc goc
 
+
     
     function removeSlash($uri = null, $separator = "/") {
         if (!empty($uri)) { 
@@ -71,7 +72,8 @@
     }
 
     defined("CLASSES_DIR")
-        || define("CLASSES_DIR", "classes");
+        || define("CLASSES_DIR", "application".DS."controllers");
+        
     //ten folder classes
     
     defined("CLASSES_PATH")
