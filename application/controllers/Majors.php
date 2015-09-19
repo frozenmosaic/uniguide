@@ -84,4 +84,9 @@ class Majors extends Application {
 		}
 		return false;
 	}
+
+	public function process($string = "null") {
+		echo "$string";
+
+	}
 }

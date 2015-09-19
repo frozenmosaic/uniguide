@@ -17,5 +17,10 @@ class College extends Application {
 		return !empty($result);
 	}
 
+	public function process($string = "null") {
+		echo "$string";
+
+	}
+
 }
 ?>

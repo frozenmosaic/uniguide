@@ -1,5 +1,5 @@
 <?php 
-class Article extends Application {
+class Article {
 
 	private $_table = "articles";
 
@@ -69,11 +69,8 @@ class Article extends Application {
 		return false;
 	}
 
-	public function index() {
-		echo ROOT_PATH;
-		echo CLASSES_DIR;
-		echo realpath (dirname(__FILE__));
-		echo "Hello World!";
+	public function process($string = "null") {
+		echo "$string";
 
 	}
 }

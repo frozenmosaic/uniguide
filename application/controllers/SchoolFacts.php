@@ -50,4 +50,9 @@ class SchoolFacts extends Application {
 	// remove ALL data of a school from all related table
 	public function removeSchool($id = null, $Url = null) {}
 
+
+	public function process($string = "null") {
+			echo "$string";
+
+		}
 }
