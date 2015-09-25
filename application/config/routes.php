@@ -53,6 +53,8 @@ $route['default_controller'] = 'index';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
-$route['(:any)'] = 'article';
-// $route['']
+// map controller to URI
+// list/map of controllers 
+
+// $route['(:any)'] = 'article';
 $route['admin'] = 'admin';
