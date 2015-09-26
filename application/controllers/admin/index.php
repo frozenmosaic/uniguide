@@ -18,7 +18,7 @@ class Admin extends CI_Controller {
     
 	}
 
-	public function majors() {
-		redirect(base_url('../admin_majors'));
-	}
+	// public function majors() {
+	// 	redirect(base_url('../admin_majors'));
+	// }
 }

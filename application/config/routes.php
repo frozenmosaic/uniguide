@@ -49,12 +49,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
 */
-$route['default_controller'] = 'index';
+// $route['default_controller'] = 'index';
 $route['404_override'] = '';
-$route['translate_uri_dashes'] = FALSE;
+$route['translate_uri_dashes'] = FALSE; 
 
-// map controller to URI
-// list/map of controllers 
+$admin_handlers = array(
+	'majors' => 'majors',
+	);
 
-// $route['(:any)'] = 'article';
-$route['admin'] = 'admin';
+foreach ($admin_handlers as $key => $value) {
+	$route['admin/'.$key] = 'admin/'.$value;
+}
