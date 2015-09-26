@@ -52,7 +52,39 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'welcome';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
-$route['article/(:any)'] = "article/process/$1";
-$route['colleges/(:any)'] = "college/process/$1";
-$route['majors/(:any)'] = "majors/process/$1";
-$route['schoolfacts/(:any)'] = "SchoolFacts/process/$1";
+
+/*
+| -------------------------------------------------------------------------
+| CUSTOM URI ROUTING
+| -------------------------------------------------------------------------
+| Routing static Urls displayed in the address bar to the default segment-based of CI
+|
+*/
+
+$handlers = array(
+ 'majors' => 'admin/majors',
+ 'school-facts' => 'admin/schoolFacts'
+ );
+
+foreach ($handlers as $key => $value) {
+ $route['admin/'.$key] = $value;
+}
+
+//---The first level---
+$route['gioi-thieu'] = "introduction";
+// $route['admin'] = "admin/admin/process";
+$route['bai-viet'] = "article/process";
+$route['du-lieu-truong'] = "college/process";
+$route['nganh-hoc'] = "majors/process";
+
+//---The second level---
+// $route['admin/(:any)'] = 'admin/admin/process/$1';
+$route['bai-viet/(:any)'] = "article/process/$1";
+$route['du-lieu-truong/(:any)'] = "college/process/$1";
+$route['nganh-hoc/(:any)'] = "majors/process/$1";
+
+//---The third level---
+$route['bai-viet/(:any)/(:any)'] = "article/process/$1/$2";
+
+
+ 
