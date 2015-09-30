@@ -17,7 +17,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | environments.
 |
 */
+
 $config['base_url'] = 'localhost:8888/';
+
 
 /*
 |--------------------------------------------------------------------------
@@ -29,6 +31,7 @@ $config['base_url'] = 'localhost:8888/';
 | variable so that it is blank.
 |
 */
+
 $config['index_page'] = '';
 
 /*

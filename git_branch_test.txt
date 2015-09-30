@@ -1,0 +1,3 @@
+testing git branch
+if this file does not appear on code on master branch (proving that changes are applied only to a specific branch), test passes.
+if this file appears on the code on master branch, test fails.

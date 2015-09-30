@@ -49,14 +49,71 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
 */
-// $route['default_controller'] = 'index';
+
+$route['default_controller'] = 'index';
 $route['404_override'] = '';
-$route['translate_uri_dashes'] = FALSE; 
+$route['translate_uri_dashes'] = FALSE;
 
-$admin_handlers = array(
-	'majors' => 'majors',
-	);
+/*
+| -------------------------------------------------------------------------
+| CUSTOM URI ROUTING
+| -------------------------------------------------------------------------
+| Routing static Urls displayed in the address bar to the default segment-based of CI
+|
+*/
+$uri_arr = $this->uri->segment_array();
 
-foreach ($admin_handlers as $key => $value) {
-	$route['admin/'.$key] = 'admin/'.$value;
+/*=== ADMIN ROUTING ===*/
+
+/*
+	array($key => $value)
+	$key = url segment
+	$value = controller
+*/
+if ($this->uri->segment(1) == 'admin') {
+    $route['admin'] = 'admin/admin';
+    
+    $admin_handlers = array('majors' => 'majors', 'articles' => 'articles', 'school-facts' => 'schoolFacts', 'school-ops' => 'schoolOps');
+    
+    foreach ($admin_handlers as $key => $value) {
+        $route['admin/' . $key] = 'admin/' . $value;
+    }
 }
+
+/*=== FRONT ROUTING ===*/
+
+else {
+    
+    if (count($uri_arr) < 2) {
+        
+        $top_lvl_articles = array('gioi-thieu', 'bai-viet', 'thu-vien', 'lien-lac');
+        
+        foreach ($top_lvl_articles as $value) {
+            $route[$value] = 'article/loadArticle/' . $value;
+        }
+    } 
+    else {
+        $parent_article = $this->uri->segment(1);
+        $level = count($uri_arr);
+        $article = end($uri_arr);
+        
+        $uri_string = $this->uri->uri_string();
+        
+        $route[$uri_string] = 'article/loadLevelArticle/' . $parent_article . '/' . $level . '/' . $article;
+        
+        // $route[$uri_string] = 'article/loadArticle/'.$level;
+        
+    }
+}
+
+// $route['gioi-thieu'] = "introduction";
+// $route['bai-viet'] = "article/process";
+// $route['du-lieu-truong'] = "college/process";
+// $route['nganh-hoc'] = "majors/process";
+
+// $route['bai-viet/(:any)'] = "article/process/$1";
+// $route['du-lieu-truong/(:any)'] = "college/process/$1";
+// $route['nganh-hoc/(:any)'] = "majors/process/$1";
+
+// $route['bai-viet/(:any)/(:any)'] = "article/process/$1/$2";
+

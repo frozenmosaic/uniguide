@@ -1,19 +1,30 @@
-<?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+<?php 
 
-class Article extends CI_Controller {
-
-	public function __construct() {
+/**
+* Class Article handles all article-format page
+*/
+class Article extends CI_Controller
+{
+	
+	public function __construct()
+	{
 		parent::__construct();
 	}
-	
-	public function index()
-	{
-		// $this->load->view('welcome_message');
-        
-        $this->load->view('template/header');
-        // $this->load->view('pages/index');
-        // $this->load->view('template/_footer');
-    
+
+	public function loadArticle($param) {
+		$data = array(
+			'test' => $param,
+			);
+		$this->load->view('pages/article', $data);
+	}
+
+	public function loadLevelArticle($parent_article, $lvl, $article) {
+		$data = array(
+			'parent_article' => $parent_article,
+			'level' => $lvl,
+			'article' => $article
+			);
+
+		$this->load->view('pages/article', $data);
 	}
 }

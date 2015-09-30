@@ -1,7 +1,11 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
+<<<<<<< HEAD
 class Index extends CI_Controller {
+=======
+class Welcome extends CI_Controller {
+>>>>>>> upstream/maitruongCI
 
 	/**
 	 * Index Page for this controller.
@@ -20,11 +24,15 @@ class Index extends CI_Controller {
 	 */
 	public function index()
 	{
+<<<<<<< HEAD
 		// $this->load->view('welcome_message');
         
         $this->load->view('template/_header');
         // $this->load->view('pages/' . $page);
         $this->load->view('template/_footer');
     
+=======
+		$this->load->view('welcome_message');
+>>>>>>> upstream/maitruongCI
 	}
 }
