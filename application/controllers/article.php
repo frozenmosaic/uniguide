@@ -11,7 +11,7 @@ class Article extends CI_Controller
 		parent::__construct();
 	}
 
-	public function loadArticle($param) {
+	public function loadTopArticle($param) {
 		$data = array(
 			'test' => $param,
 			);

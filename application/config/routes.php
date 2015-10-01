@@ -65,14 +65,16 @@ $uri_arr = $this->uri->segment_array();
 
 /*=== ADMIN ROUTING ===*/
 
-/*
-	array($key => $value)
-	$key = url segment
-	$value = controller
-*/
+
+
 if ($this->uri->segment(1) == 'admin') {
     $route['admin'] = 'admin/admin';
     
+    /*
+        array($key => $value)
+        $key = url segment
+        $value = controller
+    */
     $admin_handlers = array('majors' => 'majors', 'articles' => 'articles', 'school-facts' => 'schoolFacts', 'school-ops' => 'schoolOps');
     
     foreach ($admin_handlers as $key => $value) {
@@ -89,7 +91,7 @@ else {
         $top_lvl_articles = array('gioi-thieu', 'bai-viet', 'thu-vien', 'lien-lac');
         
         foreach ($top_lvl_articles as $value) {
-            $route[$value] = 'article/loadArticle/' . $value;
+            $route[$value] = 'article/loadTopArticle/' . $value;
         }
     } 
     else {
@@ -100,9 +102,7 @@ else {
         $uri_string = $this->uri->uri_string();
         
         $route[$uri_string] = 'article/loadLevelArticle/' . $parent_article . '/' . $level . '/' . $article;
-        
-        // $route[$uri_string] = 'article/loadArticle/'.$level;
-        
+                
     }
 }
 
