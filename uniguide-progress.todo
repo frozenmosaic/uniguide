@@ -1,15 +1,3 @@
- CMS: 
-  ☐ finished loading preview form.
-  ☐ ABSOLUTELY HAVE TO do sticky text. too painful to paste all 9 source codes all over again and again for testing.
-  ☐ append name of source code next to input field label
-  ☐ next step: add data into database.
-
-Front: 
-  ☐ build home page
-
-Framework Researching:
-  ☐ ask Hieu whether to SWITCH to a PHP framework-- switching and learning costs
-
 UX:
   ☐ handle source code input error (wrong source code into wrong input field)
   ☐ sticky text: 
@@ -20,3 +8,7 @@ UX:
   second layer of submitting: could go back to using $_POST
   ☐ another problem presents, however:
   in case the end-users have to reload the page, for any reasons including system, network, browser, etc. errors, how to make the texts stay in the input field?
+
+Pending tasks:
+  ☐ continute refactoring class Scrape
+  ☐ fix view -> schoolfacts/add.php
