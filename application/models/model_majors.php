@@ -12,12 +12,20 @@ class model_majors extends CI_Model
 		parent::__construct();
 	}
 
-
-	public function getMajors() {
-		$sql = "SELECT * FROM `{$this->_table}` ORDER BY `name`";
-
-		return $this->db->get($this->_table)->result();
+	public function count_Record()
+	{
+		return $this->db->count_all($this->_table);
 	}
+
+	public function getMajors($limit, $offset) {
+		$this->db->limit($limit, $offset);
+		$this->db->order_by("name", "ASC");
+		$query = $this->db->get($this->_table);
+
+		return $query->result();
+
+   }
+
 
 // 	public function getMajor($id = null, $name = null, $shortform = null) {
 // 		if (!empty($name)) {

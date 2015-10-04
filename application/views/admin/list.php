@@ -7,7 +7,7 @@
             <th class="col_15 ta_r">Remove</th>
             <th class="col_5 ta_r">Edit</th>
         </tr>
-        <?php foreach($data['results'] as $major) { ?>
+        <?php foreach($results as $major) { ?>
         <tr id="major-<?php echo $major->id;?>">
             <td><?php echo $major->name; ?></td>
             <td><?php echo $major->short_form; ?></td>
@@ -16,6 +16,8 @@
         </tr>
         <?php } ?>
 </table>
+<!--Make the pagination links here -->
+<?php echo $this->pagination->create_links(); ?>
 
 
 

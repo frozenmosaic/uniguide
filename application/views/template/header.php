@@ -1,7 +1,7 @@
 <!DOCTYPE>
 <head>
 <title>Uni-Guide</title>
-<link href="<?php echo asset_url(); ?>/core.css" rel="stylesheet" type="text/css" />
+<link href= "<?php echo base_url(); ?>assets/css/core.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <div id="header">

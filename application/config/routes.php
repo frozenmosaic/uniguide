@@ -61,14 +61,14 @@ $route['translate_uri_dashes'] = FALSE;
 | Routing static Urls displayed in the address bar to the default segment-based of CI
 |
 */
+
 $uri_arr = $this->uri->segment_array();
 
 /*=== ADMIN ROUTING ===*/
 
 
-
 if ($this->uri->segment(1) == 'admin') {
-    $route['admin'] = 'admin/admin';
+    $route['admin'] = 'admin/admin';    
     
     /*
         array($key => $value)
@@ -78,6 +78,8 @@ if ($this->uri->segment(1) == 'admin') {
     $admin_handlers = array('majors' => 'majors', 'articles' => 'articles', 'school-facts' => 'schoolFacts', 'school-ops' => 'schoolOps');
     
     foreach ($admin_handlers as $key => $value) {
+        $value .= $this->uri->segment(3) ? '/index/' . $this->uri->segment(3) : '';
+        $key .= $this->uri->segment(3) ? '/' . $this->uri->segment(3) : '';
         $route['admin/' . $key] = 'admin/' . $value;
     }
 }
@@ -91,7 +93,7 @@ else {
         $top_lvl_articles = array('gioi-thieu', 'bai-viet', 'thu-vien', 'lien-lac');
         
         foreach ($top_lvl_articles as $value) {
-            $route[$value] = 'article/loadTopArticle/' . $value;
+            $route[$value] = 'index.php/article/loadTopArticle/' . $value;
         }
     } 
     else {
@@ -101,7 +103,7 @@ else {
         
         $uri_string = $this->uri->uri_string();
         
-        $route[$uri_string] = 'article/loadLevelArticle/' . $parent_article . '/' . $level . '/' . $article;
+        $route[$uri_string] = 'index.php/article/loadLevelArticle/' . $parent_article . '/' . $level . '/' . $article;
                 
     }
 }
